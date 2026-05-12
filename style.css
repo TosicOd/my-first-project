@@ -108,4 +108,8 @@ input, textarea {
 
 textarea {
   height: 100px;
+#status {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
 }
