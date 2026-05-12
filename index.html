@@ -53,21 +53,39 @@
 <section>
   <h2>Оставить заявку</h2>
 
-  <form>
-    <input type="text" placeholder="Ваше имя" required><br><br>
+  <form action="https://formspree.io/f/abcd1234" method="POST">
+  <input type="text" name="name" placeholder="Ваше имя" required><br><br>
 
-    <input type="email" placeholder="Email" required><br><br>
+  <input type="email" name="email" placeholder="Email" required><br><br>
 
-    <textarea placeholder="Ваше сообщение"></textarea><br><br>
+  <textarea name="message" placeholder="Ваше сообщение"></textarea><br><br>
 
-    <button type="submit">Отправить</button>
-  </form>
+  <button type="submit">Отправить</button>
+</form>
 </section>
+<form id="contact-form">
+  <input type="text" placeholder="Ваше имя" required><br><br>
+  <input type="email" placeholder="Email" required><br><br>
+  <textarea placeholder="Ваше сообщение"></textarea><br><br>
+  <button type="submit">Отправить</button>
+</form>
 
+<p id="status"></p>
   <footer id="contacts">
     <p>Email:Toscanaod@gmail.com</p>
   </footer>
+<script id="day10-js">
+const form = document.getElementById("contact-form");
+const status = document.getElementById("status");
 
+form.addEventListener("submit", function(e)
+ {
+
+  status.textContent = "Заявка отправлена! Я свяжусь с вами 👍";
+
+  form.reset();
+});
+</script>
 </body>
 </html>
 
